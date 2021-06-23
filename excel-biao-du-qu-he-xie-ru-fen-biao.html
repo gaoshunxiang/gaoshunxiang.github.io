@@ -386,7 +386,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    247
+                    213
                 </div>
                 
 
@@ -416,33 +416,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="pandas读取excel分表"><a href="#pandas读取excel分表" class="headerlink" title="pandas读取excel分表"></a>pandas读取excel分表</h4><p>######一个文件有多个子表如下图：子表名分别为1，2</p>
-<div align="center">![excel内容.png](https://z3.ax1x.com/2021/06/23/Rn6ZjA.png)(https://imgtu.com/i/Rn6ZjA)
-
-<h6 id="参数sheet-name循环读取分表"><a href="#参数sheet-name循环读取分表" class="headerlink" title="参数sheet_name循环读取分表"></a>参数sheet_name循环读取分表</h6><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+                <h4 id="pandas读取excel分表"><a href="#pandas读取excel分表" class="headerlink" title="pandas读取excel分表"></a>pandas读取excel分表</h4><p>一个文件有多个子表如下图：子表名分别为1，2</p>
+<p><img src="https://z3.ax1x.com/2021/06/23/Rn6ZjA.png" alt="excel内容.png">(<a target="_blank" rel="noopener" href="https://imgtu.com/i/Rn6ZjA">https://imgtu.com/i/Rn6ZjA</a>)</p>
+<p>参数sheet_name循环读取分表</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
 <span class="token comment">#导入库</span>
 <span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
 <span class="token comment">#循环遍历表的名字，可以把表名存在空列表中</span>
 <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 	df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">r"你的文件路径"</span><span class="token punctuation">,</span>sheet_name<span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h6 id="注意输出子表时："><a href="#注意输出子表时：" class="headerlink" title="注意输出子表时："></a>注意输出子表时：</h6><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 	df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">r"你的文件路径"</span><span class="token punctuation">,</span>sheet_name<span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token comment">#仅仅用sheet_name循环存储子表</span>
 	df<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span><span class="token string">"你的存储路径"</span><span class="token punctuation">,</span> sheet_name<span class="token operator">=</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<div align="center">![输出结果.png](https://z3.ax1x.com/2021/06/23/Rn2xPK.png)](https://imgtu.com/i/Rn2xPK)
-
-<h6 id="结果只有最后一个子表被写入，并不是我们想要的结果"><a href="#结果只有最后一个子表被写入，并不是我们想要的结果" class="headerlink" title="结果只有最后一个子表被写入，并不是我们想要的结果"></a>结果只有最后一个子表被写入，并不是我们想要的结果</h6><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#引入ExcelWriter进行循环写入</span>
+<p><img src="https://z3.ax1x.com/2021/06/23/Rn2xPK.png" alt="输出结果.png">](<a target="_blank" rel="noopener" href="https://imgtu.com/i/Rn2xPK">https://imgtu.com/i/Rn2xPK</a>)</p>
+<p>结果只有最后一个子表被写入，并不是我们想要的结果</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#引入ExcelWriter进行循环写入</span>
 <span class="token keyword">with</span> pd<span class="token punctuation">.</span>ExcelWriter<span class="token punctuation">(</span><span class="token string">r"你的文件位置"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> writer<span class="token punctuation">:</span>
     <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">r"你的存储位置"</span><span class="token punctuation">,</span>sheet_name<span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
         df<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span>writer<span class="token punctuation">,</span> sheet_name<span class="token operator">=</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token comment">#即可实现循环写入子表功能</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-</div></div>
+
                 
             </div>
             <hr/>
