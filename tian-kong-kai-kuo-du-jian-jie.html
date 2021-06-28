@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python画百分比堆积条形图, transport python 计算机 可达性 最后一公里 共享单车 accessibility">
+    <meta name="keywords" content="天空开阔度简介, transport python 计算机 可达性 最后一公里 共享单车 accessibility">
     <meta name="description" content="硕士 | 交通运输规划与管理 | 城市轨道交通">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>python画百分比堆积条形图 | Transport</title>
+    <title>天空开阔度简介 | Transport</title>
     <link rel="icon" type="image/png" href="https://z3.ax1x.com/2021/06/18/RSQ9Lq.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">python画百分比堆积条形图</h1>
+                    <h1 class="description center-align post-title">天空开阔度简介</h1>
                 </div>
             </div>
         </div>
@@ -352,16 +352,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/%E5%A4%A9%E7%A9%BA%E5%BC%80%E9%98%94%E5%BA%A6-VSF/">
+                                <span class="chip bg-color">天空开阔度(VSF)</span>
                             </a>
                         
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">学习</span>
+                            <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">日常学习</span>
                             </a>
                         
-                            <a href="/tags/matplotlib/">
-                                <span class="chip bg-color">matplotlib</span>
+                            <a href="/tags/%E5%AD%A6%E6%9C%AF/">
+                                <span class="chip bg-color">学术</span>
                             </a>
                         
                     </div>
@@ -372,8 +372,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/matplotlib/" class="post-category">
-                                matplotlib
+                            <a href="/categories/%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86/" class="post-category">
+                                专业知识
                             </a>
                         
                     </div>
@@ -385,28 +385,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-23
+                    2021-06-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-23
+                    2021-06-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    330
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -429,61 +429,38 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>####目标图表</p>
-<p>[<img src="https://z3.ax1x.com/2021/06/23/Rud5Ae.png" alt="百分比堆积条形图.png">]</p>
-<h6 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h6><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> font_manager<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h6 id="数据准备"><a href="#数据准备" class="headerlink" title="数据准备"></a>数据准备</h6><pre class="line-numbers language-python" data-language="python"><code class="language-python">labels <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'分类一'</span><span class="token punctuation">,</span> <span class="token string">'分类二'</span><span class="token punctuation">,</span> <span class="token string">'分类三'</span><span class="token punctuation">,</span> <span class="token string">'分类四'</span><span class="token punctuation">,</span> <span class="token string">'分类五'</span><span class="token punctuation">]</span>
-first <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token number">27</span><span class="token punctuation">]</span>
-second <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">]</span>
-third <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">37</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">]</span>
-fourth <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token number">27</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">]</span>
-data <span class="token operator">=</span> <span class="token punctuation">[</span>first<span class="token punctuation">,</span> second<span class="token punctuation">,</span> third<span class="token punctuation">,</span> fourth<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#设置字体</span>
-my_font <span class="token operator">=</span> font_manager<span class="token punctuation">.</span>FontProperties<span class="token punctuation">(</span>fname<span class="token operator">=</span><span class="token string">"C:\Windows\Fonts\msyh.ttc"</span><span class="token punctuation">)</span>
-
-<span class="token comment">#设置图像大小和清晰度</span>
-plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dpi<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">)</span>
-
-<span class="token comment">#设置间隔</span>
-x <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>labels<span class="token punctuation">)</span><span class="token punctuation">)</span>
-width <span class="token operator">=</span> <span class="token number">0.35</span>
-
-<span class="token comment"># 将bottom_y元素都初始化为0</span>
-bottom_y <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>labels<span class="token punctuation">)</span><span class="token punctuation">)</span>
-data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
-
-<span class="token comment"># 按列计算计算每组柱子的总和，为计算百分比做准备</span>
-<span class="token comment">#axis = 0按行求和</span>
-sums <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
-
-<span class="token comment">#设置图例lablels，随便写长度对应data就可以</span>
-labels_1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"改善不明显"</span><span class="token punctuation">,</span><span class="token string">"改善较不明显"</span><span class="token punctuation">,</span><span class="token string">"改善较明显"</span><span class="token punctuation">,</span><span class="token string">"改善较明显"</span><span class="token punctuation">]</span>
-
-<span class="token comment">#设置显示colors</span>
-colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"#38A1D0"</span><span class="token punctuation">,</span><span class="token string">"#AACDAB"</span><span class="token punctuation">,</span><span class="token string">"#F1FB7C"</span><span class="token punctuation">,</span><span class="token string">"#F9A248"</span><span class="token punctuation">,</span><span class="token string">"#EF2820"</span><span class="token punctuation">]</span>
-
-<span class="token keyword">for</span> label_index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-<span class="token comment"># 计算每个柱子的高度，即百分比</span>
-    i <span class="token operator">=</span> data<span class="token punctuation">[</span>label_index<span class="token punctuation">]</span>
-    y <span class="token operator">=</span> i <span class="token operator">/</span> sums
-    plt<span class="token punctuation">.</span>bar<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> width<span class="token punctuation">,</span> bottom<span class="token operator">=</span>bottom_y<span class="token punctuation">,</span>label<span class="token operator">=</span>labels_1<span class="token punctuation">[</span>label_index<span class="token punctuation">]</span><span class="token punctuation">,</span>color<span class="token operator">=</span>colors<span class="token punctuation">[</span>label_index<span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token comment"># 计算bottom参数的位置</span>
-    bottom_y <span class="token operator">=</span> y <span class="token operator">+</span> bottom_y
-
-plt<span class="token punctuation">.</span>xticks<span class="token punctuation">(</span>x<span class="token punctuation">,</span> labels<span class="token punctuation">,</span>fontproperties<span class="token operator">=</span>my_font<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Percent stacked bar '</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">"X轴"</span><span class="token punctuation">,</span>fontproperties<span class="token operator">=</span>my_font<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"y轴"</span><span class="token punctuation">,</span>fontproperties<span class="token operator">=</span>my_font<span class="token punctuation">)</span>
-<span class="token comment">#注意：在legend中参数不在是fontproperties而是prop（特例）</span>
-plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>prop<span class="token operator">=</span>my_font<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h6 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h6><p>最终效果与上图类似。(标记可能不一样，无伤大雅)</p>
+                <h4 id="1-天空开阔度定义"><a href="#1-天空开阔度定义" class="headerlink" title="1. 天空开阔度定义"></a>1. 天空开阔度定义</h4><p>   <strong>天空开阔度</strong>：是指表面上给定一点的可见天空与天空半球之间的比。英文为Sky View Factor，简称SVF。Oke在1987年给出了天空开阔度的定义，并指出天空开阔度是一个无量纲的参数，值域0~1，数值为1时表示整个表面无遮挡物地完全向天空开敞，数值为0则表示整个表面被完全遮挡。</p>
+<hr>
+<h4 id="2-空开阔度的计算方法"><a href="#2-空开阔度的计算方法" class="headerlink" title="2. 空开阔度的计算方法"></a>2. 空开阔度的计算方法</h4><ol>
+<li><p><strong>几何分析法</strong></p>
+<p>  天空开阔度的几何定义和城市街谷辐射交换模型对天空开阔度进行估算。</p>
+<p>  优点：用于简单几何模型的天空开阔度计算</p>
+<p>  局限性：不适用于复杂的真实城市环境。</p>
+</li>
+<li><p><strong>鱼眼照片法</strong>（手工处理法，软件处理法）</p>
+<p>  鱼眼镜头法是利用相机全景式成像技术和鱼眼镜头就地拍摄照片，之后将照片处理为黑白（通过灰度、对比度、亮度调整），黑色部分为地面、遮挡天空的建筑、树木，白色部分为天空，以确定建筑物屋顶与天空交界线，分析天空部分的大小和形状，并得到SVF值。</p>
+<p>  优点：信息直观；估算准确度高；此外该方法可以实时记录不同时间的SVF数据(如季节变化)。</p>
+<p>  局限性：使用对于天气条件要求较高，耗时费工。</p>
+</li>
+<li><p><strong>全球定位系统</strong></p>
+<p>  利用GPS系统进行的实时数据进行VSF估算的方法，GPS信号接收器接受到卫星可见度的原始数据，利用可见卫星的数量，卫星信号的精度、强度的稀释程度进行回归分析，进而得到VSF预测值的回归方程。</p>
+<p>  优点：GPS方法的优点在于速度快，费用低，不受天气因素影响，且容易与地理信息系统GIS平台链接。</p>
+<p>  局限性：仅针对城市环境有较好的准确度，树木覆盖会造成信号千扰，影响计算结果；且天空开阔度的预测方程取决于所使用的GPS设备，不同设备之间没有通用方程</p>
+</li>
+<li><p><strong>软件模拟法</strong>（矢量计算法，阴影计算法）</p>
+<ul>
+<li><p>三维矢量估算法</p>
+<p>  三维矢量法估算天空开阔度时，将建筑简化为有相应建筑高度的体块，以SVF观察点为圆心做半球，并从圆心按照一定角度间隔放射出一定数量的垂直切面。找到每个垂直切面与观察点周边建筑体块的交线处的相应的最高仰角，并从估算点连线至半球上，仰角线与半球相交将得到交点，将所有交点项链从而描绘出球面上的天空部分和建筑遮挡部分的交线。计算交线围合的天空部分面积与半球总面积的比值，或者对每一个切片上遮挡部分占比求和并以1减去之，则可得到该估算点的天空开阔度。</p>
+</li>
+<li><p>阴影法</p>
+<p>  这种方法以重复的阴影遮罩在短时间内模拟城市区域受光情况，以计算天空开阔度。计算结果呈现为灰度图片，每一个像素格代表这个空间点的阴影和受光程度。计算中在模型天空中分布一定数量<strong>（N）</strong>的虚拟光源，计算每个像素格被虚拟光源照射到的次数，如果某像素格被照射次数为Ｎ则<strong>SVF＝1</strong>，相应灰度值为最小；次数为<strong>0</strong>次，则该像素格<strong>SVF＝0</strong>，灰度值为最大。这种方法被称为阴影法。</p>
+<p>  优点：可快速得出城市区域内连续天空开阔度。</p>
+<p>  局限性：所得连续幵阔度图的精度取决于所使用的高程数据模型的精度：高城数据模型是由城市数据模型经过栅格化变换得到的，如果栅格化精度较低，则会抹去一部分城市形态数据。</p>
+</li>
+</ul>
+<hr>
+<h4 id="3-Arcgis实现计算SVF"><a href="#3-Arcgis实现计算SVF" class="headerlink" title="3. Arcgis实现计算SVF"></a>3. Arcgis实现计算SVF</h4></li>
+</ol>
 
                 
             </div>
@@ -510,7 +487,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gaoshunxiang.github.io/python-hua-bai-fen-bi-dui-ji-tiao-xing-tu.html">https://gaoshunxiang.github.io/python-hua-bai-fen-bi-dui-ji-tiao-xing-tu.html</a>
+                    <a href="https://gaoshunxiang.github.io/tian-kong-kai-kuo-du-jian-jie.html">https://gaoshunxiang.github.io/tian-kong-kai-kuo-du-jian-jie.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,16 +525,16 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/%E5%A4%A9%E7%A9%BA%E5%BC%80%E9%98%94%E5%BA%A6-VSF/">
+                                    <span class="chip bg-color">天空开阔度(VSF)</span>
                                 </a>
                             
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">学习</span>
+                                <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">日常学习</span>
                                 </a>
                             
-                                <a href="/tags/matplotlib/">
-                                    <span class="chip bg-color">matplotlib</span>
+                                <a href="/tags/%E5%AD%A6%E6%9C%AF/">
+                                    <span class="chip bg-color">学术</span>
                                 </a>
                             
                         </div>
@@ -995,9 +972,10 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/tian-kong-kai-kuo-du-jian-jie.html">
                     <div class="card-image">
@@ -1015,9 +993,9 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1030,6 +1008,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1056,19 +1035,19 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/excel-biao-du-qu-he-xie-ru-fen-biao.html">
+                <a href="/python-hua-bai-fen-bi-dui-ji-tiao-xing-tu.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="excel表读取和写入分表">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="python画百分比堆积条形图">
                         
-                        <span class="card-title">excel表读取和写入分表</span>
+                        <span class="card-title">python画百分比堆积条形图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            似此星辰非昨夜，为谁风露立中肯！
+                            你若是愿意，我就永远爱你；你若是不愿，我就永远相思！
                         
                     </div>
                     <div class="publish-info">
@@ -1079,8 +1058,8 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python%E5%A4%84%E7%90%86excel/" class="post-category">
-                                    python处理excel
+                            <a href="/categories/matplotlib/" class="post-category">
+                                    matplotlib
                                 </a>
                             
                             
@@ -1094,12 +1073,12 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/excel/">
-                        <span class="chip bg-color">excel</span>
-                    </a>
-                    
                     <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                    <a href="/tags/matplotlib/">
+                        <span class="chip bg-color">matplotlib</span>
                     </a>
                     
                 </div>
