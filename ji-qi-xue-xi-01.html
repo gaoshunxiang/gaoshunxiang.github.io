@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="excel表读取和写入分表, transport python 计算机 可达性 最后一公里 共享单车 accessibility">
+    <meta name="keywords" content="机器学习01, transport python 计算机 可达性 最后一公里 共享单车 accessibility">
     <meta name="description" content="硕士 | 交通运输规划与管理 | 城市轨道交通">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>excel表读取和写入分表 | Transport</title>
+    <title>机器学习01 | Transport</title>
     <link rel="icon" type="image/png" href="https://z3.ax1x.com/2021/06/18/RSQ9Lq.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">excel表读取和写入分表</h1>
+                    <h1 class="description center-align post-title">机器学习01</h1>
                 </div>
             </div>
         </div>
@@ -356,12 +356,16 @@
                                 <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/excel/">
-                                <span class="chip bg-color">excel</span>
+                            <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">日常学习</span>
                             </a>
                         
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">学习</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">机器学习</span>
+                            </a>
+                        
+                            <a href="/tags/sklearn/">
+                                <span class="chip bg-color">sklearn</span>
                             </a>
                         
                     </div>
@@ -372,8 +376,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python%E5%A4%84%E7%90%86excel/" class="post-category">
-                                python处理excel
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                机器学习
                             </a>
                         
                     </div>
@@ -385,28 +389,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-23
+                    2021-07-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-23
+                    2021-07-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    213
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    10 分
                 </div>
                 
 
@@ -429,34 +433,256 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="pandas读取excel分表"><a href="#pandas读取excel分表" class="headerlink" title="pandas读取excel分表"></a>pandas读取excel分表</h4><p>一个文件有多个子表如下图：子表名分别为1，2</p>
-<p><img src="https://z3.ax1x.com/2021/06/23/Rn6ZjA.png" alt="excel内容.png">(<a target="_blank" rel="noopener" href="https://imgtu.com/i/Rn6ZjA">https://imgtu.com/i/Rn6ZjA</a>)</p>
-<p>参数sheet_name循环读取分表</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment">#导入库</span>
-<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token comment">#循环遍历表的名字，可以把表名存在空列表中</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">r"你的文件路径"</span><span class="token punctuation">,</span>sheet_name<span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h4 id="一、机器学习概述"><a href="#一、机器学习概述" class="headerlink" title="一、机器学习概述"></a>一、机器学习概述</h4><ol>
+<li><strong>深度学习涉及领域</strong></li>
+</ol>
+<ul>
+<li>传统预测</li>
+<li>图像识别</li>
+<li>自然语言处理</li>
+</ul>
+<hr>
+<ol start="2">
+<li><strong>什么是机器学习</strong></li>
+</ol>
+<ul>
+<li>数据<ul>
+<li>数据集构成：<strong>特征值+目标值</strong>（有时可以没有，如分类）</li>
+</ul>
+</li>
+<li>模型</li>
+<li>预测</li>
+</ul>
+<hr>
+<ol start="3">
+<li><strong>机器学习算法分类</strong></li>
+</ol>
+<ul>
+<li>目标值：类别——<strong>分类问题</strong><ul>
+<li>k-邻近算法、贝叶斯分类、决策树与随机森林、逻辑回归</li>
+</ul>
+</li>
+<li>目标值：连续型数据——<strong>回归问题</strong><ul>
+<li>线性回归、岭回归</li>
+</ul>
+</li>
+<li>目标值：无——<strong>无监督学习</strong><ul>
+<li>k-means</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ol start="4">
+<li><strong>机器学习开发流程</strong></li>
+</ol>
+<ul>
+<li>获取数据</li>
+<li>数据处理</li>
+<li>特征工程</li>
+<li>机器学习算法训练 - 模型</li>
+<li>模型评估</li>
+</ul>
+<hr>
+<ol start="5">
+<li><strong>机器学习库与框架</strong></li>
+</ol>
+<p>learn、pytorch、theamo、caffe2、chain2</p>
+<hr>
+<h4 id="二、特征工程"><a href="#二、特征工程" class="headerlink" title="二、特征工程"></a>二、特征工程</h4><ol>
+<li><strong>数据集(学习可用数据集)</strong></li>
+</ol>
+<ul>
+<li>sklearn（Scikit-learn）</li>
+<li>kaggle</li>
+<li>UCI</li>
+</ul>
+<hr>
+<ol start="2">
+<li><strong>sklearn（Scikit-learn）使用</strong></li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#获取小规模数据集，*表示数据集名称</span>
+sklearn<span class="token punctuation">.</span>datasets<span class="token punctuation">.</span>load_<span class="token operator">*</span> 
+sklearn<span class="token punctuation">.</span>datasets<span class="token punctuation">.</span>load_iris<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#鸢尾花数据集</span>
+<span class="token comment">#获取大规模数据集</span>
+sklearn<span class="token punctuation">.</span>datasets<span class="token punctuation">.</span>fetch_20newsgroups<span class="token punctuation">(</span>data_home<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>subset<span class="token operator">=</span><span class="token string">"train"</span><span class="token punctuation">)</span>
+<span class="token comment"># subset:"train" or "test","all",可选，选择要加载的数据集</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>数据返回值</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">datasets<span class="token punctuation">.</span>base<span class="token punctuation">.</span>Bunch <span class="token comment">#(继承自字典)</span>
+<span class="token comment"># 获取数据</span>
+<span class="token builtin">dict</span><span class="token punctuation">[</span><span class="token string">"key"</span><span class="token punctuation">]</span> <span class="token operator">=</span> values
+bunch<span class="token punctuation">.</span>key <span class="token operator">=</span> values
+<span class="token comment"># 包含字段</span>
+<span class="token comment"># data： 特征值数据组，是【n_samples*n_features】的二维ndarry数组</span>
+<span class="token comment"># traget: 标签组数，是n_samples的以为ndarray数组</span>
+<span class="token comment">#DESCR：数据描述</span>
+<span class="token comment">#fea_names:特证名，新闻数据、手写数据、回归数据集没有</span>
+<span class="token comment">#target_names:标签名</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<ul>
+<li>数据集划分</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">sklearn<span class="token punctuation">.</span>model_selection<span class="token punctuation">.</span>train_test_solit<span class="token punctuation">(</span>arrays<span class="token punctuation">,</span><span class="token string">"*options"</span><span class="token punctuation">)</span>
+<span class="token comment"># x数据集的特征值</span>
+<span class="token comment"># y数据集的标签值</span>
+<span class="token comment"># test_size随机数种子，不同的种子会造成不同的随机采样结果。相同的种子采样结果相同,默认0.25</span>
+<span class="token comment"># return训练集特征值，测试集特征值，训练集目标值，测试集目标值</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># example</span>
+<span class="token comment">#导包</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+
+<span class="token comment">#划分数据集   </span>
+x_train<span class="token punctuation">,</span>x_test<span class="token punctuation">,</span>y_train<span class="token punctuation">,</span>y_test<span class="token operator">=</span>train_test_split<span class="token punctuation">(</span>iris<span class="token punctuation">.</span>data<span class="token punctuation">,</span>iris<span class="token punctuation">.</span>target<span class="token punctuation">,</span>test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span>random_state<span class="token operator">=</span><span class="token number">22</span><span class="token punctuation">)</span><span class="token comment">#random_state随机数种子</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"训练集的特征值：\n"</span><span class="token punctuation">,</span>x_train<span class="token punctuation">,</span>x_train<span class="token punctuation">.</span>shape<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<ol start="3">
+<li><strong>特征工程</strong></li>
+</ol>
+<ul>
+<li>pandas数据清洗，数据处理</li>
+<li>特征抽取/特征提取</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 特征提取API</span>
+sklearn<span class="token punctuation">.</span>feature_extraction<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li><ul>
+<li>字典特征提取（特征离散化）</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#字典特征提取</span>
+<span class="token comment"># sklearn.feature_extraction.DictVectorizer(sparese=Ture,...)默认稀疏矩阵,使用稀疏矩阵节约内存</span>
+<span class="token comment"># 父类：转换器类</span>
+<span class="token comment"># DictVectorizer.fit_transform(X) X:array数据或者sparse矩阵 返回值为sparse矩阵</span>
+<span class="token comment"># DictVectorizer.inverse_transform(X) X:array数组或者sparse矩阵 返回值：转换之前的数据格式</span>
+<span class="token comment"># DictVectorizer.get_feature_name() 返回类别名称</span>
+
+<span class="token comment">#example</span>
+
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>feature_extraction <span class="token keyword">import</span> DictVectorizer <span class="token comment">#导包</span>
+<span class="token keyword">def</span> <span class="token function">dict_demo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">'city'</span><span class="token punctuation">:</span><span class="token string">'北京'</span><span class="token punctuation">,</span><span class="token string">'temperature'</span><span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'city'</span><span class="token punctuation">:</span><span class="token string">'上海'</span><span class="token punctuation">,</span><span class="token string">'temperature'</span><span class="token punctuation">:</span><span class="token number">60</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'city'</span><span class="token punctuation">:</span><span class="token string">'深圳'</span><span class="token punctuation">,</span><span class="token string">'temperature'</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token comment">#1、实例化一个转换器</span>
+    transfer <span class="token operator">=</span> DictVectorizer<span class="token punctuation">(</span>sparse<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    
+    <span class="token comment">#2、调用fit_transform()</span>
+    data_new <span class="token operator">=</span> transfer<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"data_new:\n"</span><span class="token punctuation">,</span>data_new<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"特征名字:\n"</span><span class="token punctuation">,</span>transfer<span class="token punctuation">.</span>get_feature_names<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> <span class="token boolean">None</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>文本特征提取(单词作为特征)</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#方法1</span>
+sklearn<span class="token punctuation">.</span>feature_extraction<span class="token punctuation">.</span>text<span class="token punctuation">.</span>CountVectorizer<span class="token punctuation">(</span>stop_words<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#stop_words停用词，特征不会统计</span>
+
+<span class="token comment"># 返回词频矩阵</span>
+<span class="token comment"># CountVectorizer.fit_transform(X) X:文本或者包含文本字符串的可迭对象，返回值：返回sparse矩阵</span>
+<span class="token comment"># CountVectorizer.inverse_transform（X）X：array数组或者sparse矩阵 返回值：转换之前数据格式</span>
+<span class="token comment"># CountVectorizer.get_feature_name() 返回值：单词列表</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># example</span>
+<span class="token comment"># 导包</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>feature_extraction<span class="token punctuation">.</span>text <span class="token keyword">import</span> CountVectorizer
+
+<span class="token keyword">def</span> <span class="token function">count_demo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Life is short,i like like python"</span><span class="token punctuation">,</span><span class="token string">"Life is too Long,i dislike python"</span><span class="token punctuation">]</span> <span class="token comment">#以空格去判断维度，中文情况下，目标词要用空格隔开(手动，不方便)，e.g."我 爱 北京 天安门"</span>
+<span class="token comment">#1、实例化一个转换器</span>
+<span class="token comment">#   stop_words是停用词参数，停用词不被考虑</span>
+    transfer <span class="token operator">=</span> CountVectorizer<span class="token punctuation">(</span>stop_words<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"to"</span><span class="token punctuation">,</span><span class="token string">"too"</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># 注意：没有参数sparese来改变结果是稀疏矩阵，通过下面toarray方法可以实现变成稀疏矩阵</span>
+    
+<span class="token comment">#2、调用fit_transform</span>
+    data_new <span class="token operator">=</span> transfer<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"data_new:\n"</span><span class="token punctuation">,</span>data_new<span class="token punctuation">.</span>toarray<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#调用toarray方法变成稀疏矩阵</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"特征名字:\n"</span><span class="token punctuation">,</span>transfer<span class="token punctuation">.</span>get_feature_names<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> <span class="token boolean">None</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 方法1扩展# jieba帮助中文分词特征抽取# 导入包import jieba# exampledef cut_word(text):# 进行中文分词# jiebae.cut(text) 产生一个生成器 # list 强转列表#" ".join变成字符串 e.g. 我 爱 北京 天安门 ；表示用空格连接列表内字符串    a = " ".join(list(jieba.cut(text)))    return text</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># example#文章特征提取：中文def count_chinese_demo():#  将中文文本进行分词    data = ['爱你就是，见不到你的时候，心里有好多话想和你说；你在身边时，觉得得静静地靠近你，即使不说话，也很好。',           '不用每日缠绵，时刻联系，你知道他不会走，他知道你不会变，大概就是最美好的爱情吧。',           '爱是风雨时，悄悄出现在你头顶的伞；爱是困惑时，默默陪伴在你身边的不弃。']    data_temp = []    for sent in data:        data_temp.append(cut_word(sent))    print(data_temp)    #1、实例化一个转换器#   stop_words是停用词参数，停用词不被考虑    transfer = CountVectorizer(stop_words=["to","too"]) #没有参数sparese来改变结果是稀疏矩阵    #3、调用fit_transform    data_new = transfer.fit_transform(data_temp)    print("data_new:\n",data_new.toarray()) #调用toarray方法变成稀疏矩阵    print("特征名字:\n",transfer.get_feature_names())        return None</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>注意：</strong>上述方法并不好，不能找到关键词（在某一类的文章中，出现的次数很多，但在其他文章中出现的次数很少，更有利于分类）</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#方法2TfidfVectorizer# TF-IDF思想：如果某个类别文章中，某一个给定的词语出现的次数很多，但在其他类别文章当中出现很少，该词语适合用来来分类# tf (term frequency)表示词频# idf (inverse document frequency) 逆向文档频率:可以由总文件数目除以包含改词语文件的数目，再将得到的商取以10为底的对数可得，可以理解该词语在该文章的重要程度。sklearn.feature_extraction.text.TfidfVectorizer(stop_words=None，...) #stop_words停用词，特征不会统计#返回词的权重矩阵# TfidfVectorizer.fit_transform(X) X:文本或者包含文本字符串的可迭对象，返回值：返回sparse矩阵# TfidfVectorizer.inverse_transform（X）X：array数组或者sparse矩阵 返回值：转换之前数据格式# TfidfVectorizer.get_feature_name() 返回值：单词列表</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># exampledef tfidf_demo():#   将中文文本进行分词    data = ['爱你就是，见不到你的时候，心里有好多话想和你说；你在身边时，觉得得静静地靠近你，即使不说话，也很好。',           '不用每日缠绵，时刻联系，你知道他不会走，他知道你不会变，大概就是最美好的爱情吧。',           '爱是风雨时，悄悄出现在你头顶的伞；爱是困惑时，默默陪伴在你身边的不弃。']    data_temp = []    for sent in data:        data_temp.append(cut_word(sent))    print(data_temp)    #1、实例化一个转换器#   stop_words是停用词参数，停用词不被考虑    transfer = TfidfVectorizer(stop_words=["to","too"])#没有参数sparese来改变结果是稀疏矩阵    #3、调用fit_transform    data_new = transfer.fit_transform(data_temp)    print("data_new:\n",data_new.toarray())#调用toarray方法变成稀疏矩阵    print("特征名字:\n",transfer.get_feature_names())        return None</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">r"你的文件路径"</span><span class="token punctuation">,</span>sheet_name<span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment">#仅仅用sheet_name循环存储子表</span>
-	df<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span><span class="token string">"你的存储路径"</span><span class="token punctuation">,</span> sheet_name<span class="token operator">=</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>图像特征提取</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p><strong>特征预处理</strong></p>
+<ul>
+<li><p><strong>数值型数据的无量纲化：</strong></p>
+<ol>
+<li>归一化</li>
+</ol>
+<p>$$<br>x^{‘}=\frac{x-min}{max-min} \quad and \quad x^{‘’}=x^{‘}*(max-min)+min<br>$$</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">sklearn<span class="token punctuation">.</span>preprocessing<span class="token punctuation">.</span>MinMaxScaler<span class="token punctuation">(</span>feature_range<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token comment">#feature_range(放缩范围)# MinMaxScaler.fit_transform(x) x:numpy array格式的数据（n_samples,n_features）# 返回值：转化后的形状相同的array</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># example# 导入包from sklearn.preprocessing import MinMaxScalerdef minmax_demo():    #归一化      #1.获取数据    data = np.arange(15).reshape(5,3)    data = pd.DataFrame(data)    #2.实例化一个转换器 feature_range参数可设置归一化参数在什么范围    transfer = MinMaxScaler(feature_range=[2,3])    #3.调用fit_transfrom    data_new = transfer.fit_transform(data)    print("data_new\n",data_new)    return None# 归一化容易受到最大最小值影响，鲁棒性性较差</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><strong>注意</strong>：归一化容易受到最大最小值影响，鲁棒性性较差。</li>
+</ul>
+<ol start="2">
+<li>标准化</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">sklearn.preprocessing.StandardScaler() # StandardScaler.fit_transform(x) x:numpy array格式的数据（n_samples,n_features）# 返回值：转化后的形状相同的array<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># example #标准化：（x-mean）/σdef stand_demo():    #1.获取数据    data = np.arange(15).reshape(5,3)    data = pd.DataFrame(data)    #2.实例化一个转换器 feature_range参数可设置归一化参数在什么范围    transfer = StandardScaler()    #3.调用fit_transfrom    data_new = transfer.fit_transform(data)    print("data_new\n",data_new)    return None</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p><strong>特征预处理API</strong></p>
+</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># sklearn.preprocessing</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>特征降维</p>
+<ul>
+<li>特征选择</li>
+</ul>
+<ol>
+<li><p>Filter过滤式</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 模块 sklearn.feature_selection</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
-<p><img src="https://z3.ax1x.com/2021/06/23/Rn2xPK.png" alt="输出结果.png">](<a target="_blank" rel="noopener" href="https://imgtu.com/i/Rn2xPK">https://imgtu.com/i/Rn2xPK</a>)</p>
-<p>结果只有最后一个子表被写入，并不是我们想要的结果</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#引入ExcelWriter进行循环写入</span>
-<span class="token keyword">with</span> pd<span class="token punctuation">.</span>ExcelWriter<span class="token punctuation">(</span><span class="token string">r"你的文件位置"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> writer<span class="token punctuation">:</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">r"你的存储位置"</span><span class="token punctuation">,</span>sheet_name<span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
-        df<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span>writer<span class="token punctuation">,</span> sheet_name<span class="token operator">=</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment">#即可实现循环写入子表功能</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p>方差选择法：低方差特征过滤</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">sklearn<span class="token punctuation">.</span>feature_selection<span class="token punctuation">.</span>VarianceThreshould<span class="token punctuation">(</span>threshold<span class="token operator">=</span><span class="token number">0.0</span><span class="token punctuation">)</span><span class="token comment"># 删除所有低方差特征# Variance.fit_transform(x) X:numppy array格式的数据（n_samples,n_features）# 返回值：训练集差异低于threshold的特征将被删除。默认值是保留在所有非零方差的特征值，即删除所有样本中具有相同值的特征。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># example# 导包from sklearn.feature_selection import VarianceThresholddef variance_demo():    #低方差过滤    #1.获取数据    data = np.arange(15).reshape(5,3)    data = pd.DataFrame(data)    #2.实例化一个转换器  VarianceThreshold默认方差阈值为0,threshold可设置阈值    transfer = VarianceThreshold(threshold=10)    #3.调用fit_transfrom    data_new = transfer.fit_transform(data)    print("data_new\n",data_new,data_new.shape)    #4.计算两个变量相关系数    r = pearsonr(data[0],data[1])    '''    结果中：第一个数为相关系数，第二个为显著水平    (1.0, 0.0)    '''    #画散点图观察相关程度     plt.figure(figsize=(20,8),dpi=100)    plt.scatter(data[0],data[1])    plt.show()    print("相关系数\n",r)    return None  #注：特征和特征之间相关性很高时：1、选取其中一个 2、加权求和 3、主成分分析</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>相关系数——特征与特征之间的相关程度</p>
+<ul>
+<li>皮尔逊相关系数（r的绝对值小于0.4低度相关；在0.4-0.7显著相关，0.7-1高度相关）</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> scipy<span class="token punctuation">.</span>stats <span class="token keyword">import</span> pearsonrx<span class="token punctuation">:</span><span class="token punctuation">(</span>N<span class="token punctuation">,</span><span class="token punctuation">)</span> array_likey<span class="token punctuation">:</span><span class="token punctuation">(</span>N<span class="token punctuation">,</span><span class="token punctuation">)</span> array_like Reture<span class="token punctuation">:</span><span class="token punctuation">(</span>p<span class="token operator">-</span>value<span class="token punctuation">,</span>Pearson' correlation coefficient<span class="token punctuation">)</span>                          <span class="token comment"># example# 见上一个example</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+</li>
+<li><p>Embeded嵌入式</p>
+<ul>
+<li>决策树 ：信息熵、信息增益</li>
+<li>正则化：L1，L2</li>
+<li>深度学习：卷积等</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>主成分分析 （PCA）</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">sklearn<span class="token punctuation">.</span>decomposition<span class="token punctuation">.</span>PCA<span class="token punctuation">(</span>n_components<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token comment"># 将数据分解为较低维度数据空间# n_n_components(小数：表示保留百分之多少的信息；整数：减少到多少特征)# PCA.fit_transform(x) x:numpy array格式的数据[n_samples,n_features]# 返回值：转化后指定维度的array</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># example# 导包from sklearn.decomposition import PCAdef pca_demo():    #1.获取数据    data = [[2,8,4,5],[6,3,0,8],[5,4,9,1]]        data = pd.DataFrame(data)        #2.实例化一个转换器  n_components 为小数时表示保留百分之多少的信息；为整数时表示减少到多少特征    transfer = PCA(n_components=0.95)        #3.调用fit_transfrom    data_new = transfer.fit_transform(data)    print("data_new\n",data_new,data_new.shape)        return None  </span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
 
                 
             </div>
@@ -483,7 +709,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gaoshunxiang.github.io/excel-biao-du-qu-he-xie-ru-fen-biao.html">https://gaoshunxiang.github.io/excel-biao-du-qu-he-xie-ru-fen-biao.html</a>
+                    <a href="https://gaoshunxiang.github.io/ji-qi-xue-xi-01.html">https://gaoshunxiang.github.io/ji-qi-xue-xi-01.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -525,12 +751,16 @@
                                     <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/excel/">
-                                    <span class="chip bg-color">excel</span>
+                                <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">日常学习</span>
                                 </a>
                             
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">学习</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">机器学习</span>
+                                </a>
+                            
+                                <a href="/tags/sklearn/">
+                                    <span class="chip bg-color">sklearn</span>
                                 </a>
                             
                         </div>
@@ -968,41 +1198,43 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/python-hua-bai-fen-bi-dui-ji-tiao-xing-tu.html">
+                <a href="/ji-qi-xue-xi-01.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="python画百分比堆积条形图">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="机器学习01">
                         
-                        <span class="card-title">python画百分比堆积条形图</span>
+                        <span class="card-title">机器学习01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            你若是愿意，我就永远爱你；你若是不愿，我就永远相思！
+                            抱怨身处黑暗，不如提灯前行。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/matplotlib/" class="post-category">
-                                    matplotlib
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1010,12 +1242,16 @@
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">学习</span>
+                    <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">日常学习</span>
                     </a>
                     
-                    <a href="/tags/matplotlib/">
-                        <span class="chip bg-color">matplotlib</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/sklearn/">
+                        <span class="chip bg-color">sklearn</span>
                     </a>
                     
                 </div>
@@ -1029,31 +1265,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/xin-qing-yi-dian-ling.html">
+                <a href="/tian-kong-kai-kuo-du-jian-jie.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="心情一点零">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="天空开阔度简介">
                         
-                        <span class="card-title">心情一点零</span>
+                        <span class="card-title">天空开阔度简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            后来才知道真正放下一个人是什么感受
+                            再远的路，一步一步也能走完！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%84%9F%E6%82%9F/" class="post-category">
-                                    感悟
+                            <a href="/categories/%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    专业知识
                                 </a>
                             
                             
@@ -1063,16 +1299,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BF%83%E6%83%85/">
-                        <span class="chip bg-color">心情</span>
+                    <a href="/tags/%E5%A4%A9%E7%A9%BA%E5%BC%80%E9%98%94%E5%BA%A6-VSF/">
+                        <span class="chip bg-color">天空开阔度(VSF)</span>
                     </a>
                     
-                    <a href="/tags/%E6%84%9F%E6%82%9F/">
-                        <span class="chip bg-color">感悟</span>
+                    <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">日常学习</span>
                     </a>
                     
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/%E5%AD%A6%E6%9C%AF/">
+                        <span class="chip bg-color">学术</span>
                     </a>
                     
                 </div>
