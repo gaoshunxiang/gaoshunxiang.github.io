@@ -396,14 +396,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-07
+                    2021-07-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    68
+                    230
                 </div>
                 
 
@@ -439,6 +439,21 @@
 <span class="token comment"># reset_index(name='出入口数')设置统计结果列索引</span>
 df_value <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">"站点名"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>rename_axis<span class="token punctuation">(</span><span class="token string">'站点名'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'出入口数'</span><span class="token punctuation">)</span>
 df_value<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="TIP2：筛选匹配项"><a href="#TIP2：筛选匹配项" class="headerlink" title="TIP2：筛选匹配项"></a>TIP2：筛选匹配项</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 去除df["起点"]中多余(匹配不上df_example["栅格序"]的内容)</span>
+df <span class="token operator">=</span>  df<span class="token punctuation">.</span>loc<span class="token punctuation">[</span>df<span class="token punctuation">[</span><span class="token string">"起点"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isin<span class="token punctuation">(</span>df_example<span class="token punctuation">[</span><span class="token string">"栅格序"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>#####TIP3：删除重复项：drop_duplicates</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># drop_duplicate方法是对DataFrame格式的数据，去除特定列下面的重复行。返回DataFrame格式的数据</span>
+df<span class="token punctuation">.</span>drop_duplicates<span class="token punctuation">(</span>keep<span class="token operator">=</span> <span class="token punctuation">,</span> subset<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span> <span class="token punctuation">)</span>
+<span class="token comment"># keep: {‘first’, ‘last’, False},默认为’first’</span>
+<span class="token comment"># 保留项。保留第一个（first）/最后一个（last）/不保留（False）重复的项</span>
+<span class="token comment"># subset：默认所有列</span>
+<span class="token comment"># 指定的列。即需要删除哪些列中重复的项，列用’'说明，用,隔开</span>
+<span class="token comment"># inplace : {‘True’，‘False’},默认为False</span>
+<span class="token comment"># 是否在原数据上修改。False表示另存一个副本</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 
 
                 
@@ -955,18 +970,17 @@ df_value<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/pandas-shi-yong-ji-qiao.html">
+                <a href="/arcgis-shi-yong-ji-qiao-zha-ge-ji-suan-qi.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="pandas 使用技巧">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="arcgis使用技巧-栅格计算器">
                         
-                        <span class="card-title">pandas 使用技巧</span>
+                        <span class="card-title">arcgis使用技巧-栅格计算器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -976,39 +990,34 @@ df_value<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-07
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-08
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/pandas/" class="post-category">
-                                    pandas
+                            <a href="/categories/arcgis/" class="post-category">
+                                    arcgis
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/arcgis/">
+                        <span class="chip bg-color">arcgis</span>
                     </a>
                     
-                    <a href="/tags/pandas/">
-                        <span class="chip bg-color">pandas</span>
+                    <a href="/tags/%E6%A0%85%E6%A0%BC%E5%A4%84%E7%90%86/">
+                        <span class="chip bg-color">栅格处理</span>
                     </a>
                     
-                    <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">日常学习</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
-                        <span class="chip bg-color">数据处理</span>
+                    <a href="/tags/%E6%A0%85%E6%A0%BC%E8%AE%A1%E7%AE%97%E5%99%A8/">
+                        <span class="chip bg-color">栅格计算器</span>
                     </a>
                     
                 </div>
@@ -1168,7 +1177,7 @@ df_value<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.8k</span>
+                        class="white-color">5.5k</span>
             
             
             
