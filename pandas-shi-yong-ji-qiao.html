@@ -396,21 +396,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-08
+                    2021-07-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    230
+                    597
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -452,6 +452,23 @@ df<span class="token punctuation">.</span>drop_duplicates<span class="token punc
 <span class="token comment"># 指定的列。即需要删除哪些列中重复的项，列用’'说明，用,隔开</span>
 <span class="token comment"># inplace : {‘True’，‘False’},默认为False</span>
 <span class="token comment"># 是否在原数据上修改。False表示另存一个副本</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="TIP5：merge-函数"><a href="#TIP5：merge-函数" class="headerlink" title="TIP5：merge()函数"></a>TIP5：merge()函数</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">pd<span class="token punctuation">.</span>merge<span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">,</span> how<span class="token operator">=</span><span class="token string">'inner'</span><span class="token punctuation">,</span> on<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> left_on<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> right_on<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
+         left_index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> right_index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> sort<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+         suffixes<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'_x'</span><span class="token punctuation">,</span> <span class="token string">'_y'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># left: 拼接的左侧DataFrame对象</span>
+<span class="token comment"># right: 拼接的右侧DataFrame对象</span>
+<span class="token comment"># on: 指定两个dataframe按某一列进行连接，该列必须同时出现在两个dataframe中。</span>
+<span class="token comment"># 如果未传递且left_index和right_index为False，则DataFrame中的列的交集将被推断为连接键。</span>
+<span class="token comment"># left_on:左侧DataFrame中用作连接键的列。 可以是列名，索引级名称，也可以是长度等于DataFrame长度的数组。</span>
+<span class="token comment"># right_on: 右侧DataFrame中用作连接键的列。可以是列名，索引级名称，也可以是长度等于DataFrame长度的数组。</span>
+<span class="token comment"># left_index: 如果为True，则使用左侧DataFrame中的索引（行标签）作为其连接键的列。</span>
+<span class="token comment"># 对于具有MultiIndex（分层）的DataFrame，级别数必须与右侧DataFrame中的连接键数相匹配。</span>
+<span class="token comment"># right_index: 与left_index功能相似。</span>
+<span class="token comment"># how: ‘left’, ‘right’, ‘outer’或‘inner’之一。</span>
+<span class="token comment"># 默认inner。inner是取两个dataframe的连接键列中元素的交集，outer取其并集，如果其中一个dataframe中的连接键列中不含有某元素，则该元素对应的这行数据中的其它列用NAN填充。</span>
+<span class="token comment"># sort: 按字典顺序通过连接键对结果DataFrame进行排序。 默认为True，设置为False将在很多情况下显着提高性能。</span>
+<span class="token comment"># suffixes: 用于重叠列的字符串后缀元组。 默认为（‘x’，’ y’）。也可手动指定：suffixes=(“df1”,“df2”)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1177,7 +1194,7 @@ df<span class="token punctuation">.</span>drop_duplicates<span class="token punc
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">5.5k</span>
+                        class="white-color">5.8k</span>
             
             
             
