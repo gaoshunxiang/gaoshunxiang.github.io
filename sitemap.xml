@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gaoshunxiang.github.io/pyinstaller-da-bao-fang-fa.html</loc>
+    
+    <lastmod>2021-10-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gaoshunxiang.github.io/juypter-wen-jian-zhuan-wei-py-wen-jian.html</loc>
     
     <lastmod>2021-10-19</lastmod>
@@ -236,6 +243,13 @@
   
   <url>
     <loc>https://gaoshunxiang.github.io/tags/juypter/</loc>
+    <lastmod>2021-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaoshunxiang.github.io/tags/pyinstaller/</loc>
     <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

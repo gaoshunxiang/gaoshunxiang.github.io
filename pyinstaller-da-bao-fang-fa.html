@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="pandas 使用技巧, transport python 计算机 可达性 最后一公里 共享单车 accessibility">
+    <meta name="keywords" content="pyinstaller打包方法, transport python 计算机 可达性 最后一公里 共享单车 accessibility">
     <meta name="description" content="硕士 | 交通运输规划与管理 | 城市轨道交通">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>pandas 使用技巧 | Transport</title>
+    <title>pyinstaller打包方法 | Transport</title>
     <link rel="icon" type="image/png" href="https://z3.ax1x.com/2021/06/18/RSQ9Lq.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">pandas 使用技巧</h1>
+                    <h1 class="description center-align post-title">pyinstaller打包方法</h1>
                 </div>
             </div>
         </div>
@@ -356,16 +356,12 @@
                                 <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/pandas/">
-                                <span class="chip bg-color">pandas</span>
-                            </a>
-                        
                             <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
                                 <span class="chip bg-color">日常学习</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
-                                <span class="chip bg-color">数据处理</span>
+                            <a href="/tags/pyinstaller/">
+                                <span class="chip bg-color">pyinstaller</span>
                             </a>
                         
                     </div>
@@ -389,28 +385,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-07
+                    2021-10-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-14
+                    2021-10-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    629
+                    134
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -433,49 +429,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="TIP1：value-counts用法"><a href="#TIP1：value-counts用法" class="headerlink" title="TIP1：value_counts用法"></a>TIP1：value_counts用法</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># value_counts结果变成data_frame格式</span>
-<span class="token comment"># df["站点名"]是需要统计的series；</span>
-<span class="token comment"># rename_axis('站点名')设置被统计字段列索引；</span>
-<span class="token comment"># reset_index(name='出入口数')设置统计结果列索引</span>
-df_value <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">"站点名"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>rename_axis<span class="token punctuation">(</span><span class="token string">'站点名'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'出入口数'</span><span class="token punctuation">)</span>
-df_value<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h4 id="一-pyinstaller打包方法"><a href="#一-pyinstaller打包方法" class="headerlink" title="一.pyinstaller打包方法"></a>一.pyinstaller打包方法</h4><ul>
+<li><p>将需要打包的test.py文件放入目标文件下</p>
+</li>
+<li><p>在目标文件夹下开启终端(cmd)</p>
+</li>
+<li><p>执行命令<strong>pyintaller -F test.py</strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#-F 选项可以打出一个exe文件，默认是 -D，意思是打成一个文件夹。</span>
+<span class="token comment">#-w 选项可以打桌面程序，去掉命令行黑框</span>
 
-<h5 id="TIP2：筛选匹配项"><a href="#TIP2：筛选匹配项" class="headerlink" title="TIP2：筛选匹配项"></a>TIP2：筛选匹配项</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 去除df["起点"]中多余(匹配不上df_example["栅格序"]的内容)</span>
-df <span class="token operator">=</span>  df<span class="token punctuation">.</span>loc<span class="token punctuation">[</span>df<span class="token punctuation">[</span><span class="token string">"起点"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isin<span class="token punctuation">(</span>df_example<span class="token punctuation">[</span><span class="token string">"栅格序"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>#####TIP3：删除重复项：drop_duplicates</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># drop_duplicate方法是对DataFrame格式的数据，去除特定列下面的重复行。返回DataFrame格式的数据</span>
-df<span class="token punctuation">.</span>drop_duplicates<span class="token punctuation">(</span>keep<span class="token operator">=</span> <span class="token punctuation">,</span> subset<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span> <span class="token punctuation">)</span>
-<span class="token comment"># keep: {‘first’, ‘last’, False},默认为’first’</span>
-<span class="token comment"># 保留项。保留第一个（first）/最后一个（last）/不保留（False）重复的项</span>
-<span class="token comment"># subset：默认所有列</span>
-<span class="token comment"># 指定的列。即需要删除哪些列中重复的项，列用’'说明，用,隔开</span>
-<span class="token comment"># inplace : {‘True’，‘False’},默认为False</span>
-<span class="token comment"># 是否在原数据上修改。False表示另存一个副本</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="TIP5：merge-函数"><a href="#TIP5：merge-函数" class="headerlink" title="TIP5：merge()函数"></a>TIP5：merge()函数</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">pd<span class="token punctuation">.</span>merge<span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">,</span> how<span class="token operator">=</span><span class="token string">'inner'</span><span class="token punctuation">,</span> on<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> left_on<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> right_on<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
-         left_index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> right_index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> sort<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
-         suffixes<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'_x'</span><span class="token punctuation">,</span> <span class="token string">'_y'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment"># left: 拼接的左侧DataFrame对象</span>
-<span class="token comment"># right: 拼接的右侧DataFrame对象</span>
-<span class="token comment"># on: 指定两个dataframe按某一列进行连接，该列必须同时出现在两个dataframe中。</span>
-<span class="token comment"># 如果未传递且left_index和right_index为False，则DataFrame中的列的交集将被推断为连接键。</span>
-<span class="token comment"># left_on:左侧DataFrame中用作连接键的列。 可以是列名，索引级名称，也可以是长度等于DataFrame长度的数组。</span>
-<span class="token comment"># right_on: 右侧DataFrame中用作连接键的列。可以是列名，索引级名称，也可以是长度等于DataFrame长度的数组。</span>
-<span class="token comment"># left_index: 如果为True，则使用左侧DataFrame中的索引（行标签）作为其连接键的列。</span>
-<span class="token comment"># 对于具有MultiIndex（分层）的DataFrame，级别数必须与右侧DataFrame中的连接键数相匹配。</span>
-<span class="token comment"># right_index: 与left_index功能相似。</span>
-<span class="token comment"># how: ‘left’, ‘right’, ‘outer’或‘inner’之一。</span>
-<span class="token comment"># 默认inner。inner是取两个dataframe的连接键列中元素的交集，outer取其并集，如果其中一个dataframe中的连接键列中不含有某元素，则该元素对应的这行数据中的其它列用NAN填充。</span>
-<span class="token comment"># sort: 按字典顺序通过连接键对结果DataFrame进行排序。 默认为True，设置为False将在很多情况下显着提高性能。</span>
-<span class="token comment"># suffixes: 用于重叠列的字符串后缀元组。 默认为（‘x’，’ y’）。也可手动指定：suffixes=(“df1”,“df2”)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h5 id="TIP6：两个series变成字典"><a href="#TIP6：两个series变成字典" class="headerlink" title="TIP6：两个series变成字典"></a>TIP6：两个series变成字典</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">key_1 <span class="token operator">=</span> df_example<span class="token punctuation">[</span><span class="token string">"栅格序"</span><span class="token punctuation">]</span>
-value_1 <span class="token operator">=</span> df_example<span class="token punctuation">[</span><span class="token string">"岗位人数"</span><span class="token punctuation">]</span>
-dict1 <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token builtin">zip</span><span class="token punctuation">(</span>key_1<span class="token punctuation">,</span> value_1<span class="token punctuation">)</span><span class="token punctuation">)</span>
-dict1 <span class="token comment"># dict1变成相应的字典</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
+<span class="token comment">#-i 可以设置图标路径，将图标放在根目录 pyinstaller -F -i cat.ico demo.py 下载图标：https://www.easyicon.net/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>得到的结果在目标文件下的dist文件下</p>
+</li>
+</ul>
 
                 
             </div>
@@ -502,7 +468,7 @@ dict1 <span class="token comment"># dict1变成相应的字典</span><span aria-
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gaoshunxiang.github.io/pandas-shi-yong-ji-qiao.html">https://gaoshunxiang.github.io/pandas-shi-yong-ji-qiao.html</a>
+                    <a href="https://gaoshunxiang.github.io/pyinstaller-da-bao-fang-fa.html">https://gaoshunxiang.github.io/pyinstaller-da-bao-fang-fa.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -544,16 +510,12 @@ dict1 <span class="token comment"># dict1变成相应的字典</span><span aria-
                                     <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/pandas/">
-                                    <span class="chip bg-color">pandas</span>
-                                </a>
-                            
                                 <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
                                     <span class="chip bg-color">日常学习</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
-                                    <span class="chip bg-color">数据处理</span>
+                                <a href="/tags/pyinstaller/">
+                                    <span class="chip bg-color">pyinstaller</span>
                                 </a>
                             
                         </div>
@@ -991,54 +953,56 @@ dict1 <span class="token comment"># dict1变成相应的字典</span><span aria-
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/arcgis-shi-yong-ji-qiao-zha-ge-ji-suan-qi.html">
+                <a href="/pyinstaller-da-bao-fang-fa.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="arcgis使用技巧-栅格计算器">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="pyinstaller打包方法">
                         
-                        <span class="card-title">arcgis使用技巧-栅格计算器</span>
+                        <span class="card-title">pyinstaller打包方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Great minds have purpose,others have wishes!
+                            最浪漫的不是今世今生，而是来世永生！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/arcgis/" class="post-category">
-                                    arcgis
+                            <a href="/categories/pandas/" class="post-category">
+                                    pandas
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/arcgis/">
-                        <span class="chip bg-color">arcgis</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E6%A0%85%E6%A0%BC%E5%A4%84%E7%90%86/">
-                        <span class="chip bg-color">栅格处理</span>
+                    <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">日常学习</span>
                     </a>
                     
-                    <a href="/tags/%E6%A0%85%E6%A0%BC%E8%AE%A1%E7%AE%97%E5%99%A8/">
-                        <span class="chip bg-color">栅格计算器</span>
+                    <a href="/tags/pyinstaller/">
+                        <span class="chip bg-color">pyinstaller</span>
                     </a>
                     
                 </div>
@@ -1052,31 +1016,31 @@ dict1 <span class="token comment"># dict1变成相应的字典</span><span aria-
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/fu-miao-bian-pang-liao.html">
+                <a href="/juypter-wen-jian-zhuan-wei-py-wen-jian.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="福喵变胖了？">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt=".juypter文件转为.py文件">
                         
-                        <span class="card-title">福喵变胖了？</span>
+                        <span class="card-title">.juypter文件转为.py文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本喵的日常
+                            在我荒瘠的土地上，你是最后的玫瑰。 ——聂鲁达
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A6%8F%E5%96%B5/" class="post-category">
-                                    福喵
+                            <a href="/categories/pandas/" class="post-category">
+                                    pandas
                                 </a>
                             
                             
@@ -1086,8 +1050,16 @@ dict1 <span class="token comment"># dict1变成相应的字典</span><span aria-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%A6%8F%E5%96%B5/">
-                        <span class="chip bg-color">福喵</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">日常学习</span>
+                    </a>
+                    
+                    <a href="/tags/juypter/">
+                        <span class="chip bg-color">juypter</span>
                     </a>
                     
                 </div>
