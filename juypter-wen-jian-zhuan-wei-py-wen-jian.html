@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python爬取高德poi(停车场), transport python 计算机 可达性 最后一公里 共享单车 accessibility">
+    <meta name="keywords" content=".juypter文件转为.py文件, transport python 计算机 可达性 最后一公里 共享单车 accessibility">
     <meta name="description" content="硕士 | 交通运输规划与管理 | 城市轨道交通">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>python爬取高德poi(停车场) | Transport</title>
+    <title>.juypter文件转为.py文件 | Transport</title>
     <link rel="icon" type="image/png" href="https://z3.ax1x.com/2021/06/18/RSQ9Lq.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">python爬取高德poi(停车场)</h1>
+                    <h1 class="description center-align post-title">.juypter文件转为.py文件</h1>
                 </div>
             </div>
         </div>
@@ -356,12 +356,12 @@
                                 <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/%E7%88%AC%E8%99%AB/">
-                                <span class="chip bg-color">爬虫</span>
+                            <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">日常学习</span>
                             </a>
                         
-                            <a href="/tags/%E9%AB%98%E5%BE%B7/">
-                                <span class="chip bg-color">高德</span>
+                            <a href="/tags/juypter/">
+                                <span class="chip bg-color">juypter</span>
                             </a>
                         
                     </div>
@@ -372,8 +372,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python%E7%88%AC%E8%99%AB/" class="post-category">
-                                python爬虫
+                            <a href="/categories/pandas/" class="post-category">
+                                pandas
                             </a>
                         
                     </div>
@@ -385,28 +385,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-19
+                    2021-10-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-19
+                    2021-10-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    498
+                    47
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -429,101 +429,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="高德爬取北京市停车场poi"><a href="#高德爬取北京市停车场poi" class="headerlink" title="高德爬取北京市停车场poi"></a>高德爬取北京市停车场poi</h4><pre class="line-numbers language-#!/usr/bin/env" data-language="#!/usr/bin/env"><div class="caption"><span>python</span></div><code class="language-#!/usr/bin/env"># coding: utf-8
-from urllib.parse import quote
-from urllib import request
-import json
-import pandas as pd
-
-
-# 密钥
-amap_web_key = ‘your_key’
-
-# POI对应编码，停车场编码为 150900
-POI = '150900'
-# 城市
-city = '北京'
-# POI关键词搜索网址
-POI_url = "https://restapi.amap.com/v3/place/text?"
-# 行政区域查询网址
-district_url =  "https://restapi.amap.com/v3/config/district?subdistrict=1"
-# 得到行政区域的编码
-def get_districts(city):
-    req_url = district_url+"&amp;key="+amap_web_key+"&amp;keywords="+quote(city)
-    # quote屏蔽特殊字符，如url中不允许有空格
-    with request.urlopen(req_url) as f:
-        data = f.read().decode("utf-8")
-        data = json.loads(data) # 将json字符串类型转换为字典类型
-        data = data['districts'][1]['districts']
-        
-        districts = []
-        for i in data:
-            print(i['name']+"编码为"+i['adcode'])
-            districts.append(i['adcode'])
-    return districts
-
-# 爬取单页的POI数据
-def get_POI_page(adcode,POI_code,page):
-    req_url = POI_url+"&amp;key="+amap_web_key+"&amp;types="+POI_code+"&amp;city="+adcode+"&amp;citylimit=true&amp;output=json&amp;offset=25&amp;page="+str(page)
-    # 相关参数说明
-    with request.urlopen(req_url) as f:
-        data = f.read().decode("utf-8")
-        data = json.loads(data) # 将json字符串类型转换为字典类型
-    return data
-
-# 爬取完整的POI数据
-def get_POI(adcode,POI_code):
-    page = 1
-    pois_allpage = []
-    
-    while True:
-        data = get_POI_page(adcode,POI_code,page)
-        # 当检索完毕，停止循环
-        if data['count'] == "0":  # 一定要注意此处0 应当是str，而非int
-            break
-        else:
-            pois_allpage.append(data['pois'])
-#             print("爬取到第%d页"%page)
-            page += 1
-        
-        
-    return pois_allpage
-
-# 整理信息，并写入csv
-def write_to_csv(city,POI_code):
-    # 城市辖区划分
-    districts = get_districts(city)
-    
-    # 编号，（停车场）名字，类型，经度，纬度，城市名字，辖区名字
-    ids, names, types, addresses, lons, lats, citynames, adnames= [],[],[],[],[],[],[],[]
-    
-    for adcode in districts:
-#         print("以下是",adcode)
-        pois_allpage = get_POI(adcode,POI)
-
-        for poi_onepage in pois_allpage:
-            for poi in poi_onepage:
-                ids.append(poi['id'])
-                names.append(poi['name'])
-                types.append(poi['type'])
-                lons.append(str(poi['location'].split(',')[0]))
-                lats.append(str(poi['location'].split(',')[1]))
-                citynames.append(poi['cityname'])
-                adnames.append(poi['adname'])
-    
-    print("爬取完毕，正在生成文件……")
-    
-    # 构造字典，生成生成csv
-    poi_dict = {}
-    poi_dict['ids'], poi_dict['names'], poi_dict['types'], poi_dict['lons'],     poi_dict['lats'], poi_dict['citynames'], poi_dict['adnames'] = ids, names, types, lons, lats, citynames, adnames
-    
-    poi_df = pd.DataFrame(poi_dict)
-    poi_df.to_csv(r"文件路径+文件名称",encoding='gbk')
-    
-    print("已生成对应文件")
-            
-if __name__ == '__main__':
-    write_to_csv(city,POI)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h4><ul>
+<li><p>在<code>test.ipynb(目标文件)</code>文件所在目录下，打开终端(cmd)，执行以下命令：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">jupyter nbconvert <span class="token operator">-</span><span class="token operator">-</span>to script test<span class="token punctuation">.</span>ipynb <span class="token comment">#test.ipynb为要转换文件名字</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h4><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/5dND1J"><img src="https://z3.ax1x.com/2021/10/19/5dND1J.png" alt="方法2"></a></p>
 
                 
             </div>
@@ -550,7 +460,7 @@ if __name__ == '__main__':
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gaoshunxiang.github.io/python-pa-qu-gao-de-poi-ting-che-chang.html">https://gaoshunxiang.github.io/python-pa-qu-gao-de-poi-ting-che-chang.html</a>
+                    <a href="https://gaoshunxiang.github.io/juypter-wen-jian-zhuan-wei-py-wen-jian.html">https://gaoshunxiang.github.io/juypter-wen-jian-zhuan-wei-py-wen-jian.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -592,12 +502,12 @@ if __name__ == '__main__':
                                     <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/%E7%88%AC%E8%99%AB/">
-                                    <span class="chip bg-color">爬虫</span>
+                                <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">日常学习</span>
                                 </a>
                             
-                                <a href="/tags/%E9%AB%98%E5%BE%B7/">
-                                    <span class="chip bg-color">高德</span>
+                                <a href="/tags/juypter/">
+                                    <span class="chip bg-color">juypter</span>
                                 </a>
                             
                         </div>
@@ -1035,92 +945,36 @@ if __name__ == '__main__':
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/excel-biao-du-qu-he-xie-ru-fen-biao.html">
+                <a href="/juypter-wen-jian-zhuan-wei-py-wen-jian.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="excel表读取和写入分表">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt=".juypter文件转为.py文件">
                         
-                        <span class="card-title">excel表读取和写入分表</span>
+                        <span class="card-title">.juypter文件转为.py文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            似此星辰非昨夜，为谁风露立中肯！
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-23
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/python%E5%A4%84%E7%90%86excel/" class="post-category">
-                                    python处理excel
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/excel/">
-                        <span class="chip bg-color">excel</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">学习</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/python-pa-qu-gao-de-poi-ting-che-chang.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="python爬取高德poi(停车场)">
-                        
-                        <span class="card-title">python爬取高德poi(停车场)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            努力到无能为力，拼搏到感动自己
+                            在我荒瘠的土地上，你是最后的玫瑰。 ——聂鲁达
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python%E7%88%AC%E8%99%AB/" class="post-category">
-                                    python爬虫
+                            <a href="/categories/pandas/" class="post-category">
+                                    pandas
                                 </a>
                             
                             
@@ -1135,12 +989,73 @@ if __name__ == '__main__':
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E7%88%AC%E8%99%AB/">
-                        <span class="chip bg-color">爬虫</span>
+                    <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">日常学习</span>
                     </a>
                     
-                    <a href="/tags/%E9%AB%98%E5%BE%B7/">
-                        <span class="chip bg-color">高德</span>
+                    <a href="/tags/juypter/">
+                        <span class="chip bg-color">juypter</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/ji-qi-xue-xi-day02.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="机器学习day02">
+                        
+                        <span class="card-title">机器学习day02</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            如果有一天我忍不住问你，你一定要骗我，就算你心里多不情愿，也不要告诉我你最爱的人不是我。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">日常学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/sklearn/">
+                        <span class="chip bg-color">sklearn</span>
                     </a>
                     
                 </div>

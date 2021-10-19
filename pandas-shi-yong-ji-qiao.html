@@ -396,14 +396,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-09
+                    2021-07-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    597
+                    629
                 </div>
                 
 
@@ -470,7 +470,11 @@ df<span class="token punctuation">.</span>drop_duplicates<span class="token punc
 <span class="token comment"># sort: 按字典顺序通过连接键对结果DataFrame进行排序。 默认为True，设置为False将在很多情况下显着提高性能。</span>
 <span class="token comment"># suffixes: 用于重叠列的字符串后缀元组。 默认为（‘x’，’ y’）。也可手动指定：suffixes=(“df1”,“df2”)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
+<hr>
+<h5 id="TIP6：两个series变成字典"><a href="#TIP6：两个series变成字典" class="headerlink" title="TIP6：两个series变成字典"></a>TIP6：两个series变成字典</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">key_1 <span class="token operator">=</span> df_example<span class="token punctuation">[</span><span class="token string">"栅格序"</span><span class="token punctuation">]</span>
+value_1 <span class="token operator">=</span> df_example<span class="token punctuation">[</span><span class="token string">"岗位人数"</span><span class="token punctuation">]</span>
+dict1 <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token builtin">zip</span><span class="token punctuation">(</span>key_1<span class="token punctuation">,</span> value_1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+dict1 <span class="token comment"># dict1变成相应的字典</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -1194,7 +1198,7 @@ df<span class="token punctuation">.</span>drop_duplicates<span class="token punc
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9k</span>
+                        class="white-color">9.1k</span>
             
             
             
