@@ -392,21 +392,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-28
+                    2021-10-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -458,9 +458,22 @@
 <p>  局限性：所得连续幵阔度图的精度取决于所使用的高程数据模型的精度：高城数据模型是由城市数据模型经过栅格化变换得到的，如果栅格化精度较低，则会抹去一部分城市形态数据。</p>
 </li>
 </ul>
-<hr>
-<h4 id="3-Arcgis实现计算SVF"><a href="#3-Arcgis实现计算SVF" class="headerlink" title="3. Arcgis实现计算SVF"></a>3. Arcgis实现计算SVF</h4></li>
+<h4 id="3-计算SVF"><a href="#3-计算SVF" class="headerlink" title="3. 计算SVF"></a>3. 计算SVF</h4></li>
 </ol>
+<ul>
+<li><p>SVF概述</p>
+<ul>
+<li><p>城市的天空开阔度( <strong>Sky View Factor,<strong>SVF)是重要的城市形态学参数，是对地表形态开阔程度的定量描述，</strong>反映了周围地形和地物对物理辐射在半球范围内的遮蔽影响及视线在半球范围内被遮挡的程度。****Oke</strong>在1987年给出了天空开阔度的定义，并指出天空开阔度是一个无量纲的参数，值域<strong>0~1</strong>，数值为1时表示整个表面无遮挡物，数值为0则表示整个表面被完全遮挡。</p>
+<p><strong>主要应用领域：</strong>城市气候研究和城市规划实践</p>
+</li>
+</ul>
+</li>
+<li><p>SVF常用方法简介</p>
+<ul>
+<li>天空开阔度的计算方法主要有几何分析法、鱼眼相机法、GPS估测法、软件计算法。<strong>几何分析法</strong>适用于简单的街道形态，对抽象街道的分析准确性高，但因计算复杂难以投入具体城市实际应用；<strong>鱼眼相机法</strong>相对直观可靠，但其结果受天气条件和树木、广告牌等物体影响大，难以单独评估建筑的影响，且费时费力，不适合包含大量采样点的制图计算；GPS估算法十分迅速、成本低廉，但它的精度受各种条件影响难以控制；软件计算法成本相对较低，计算时间合理，不受天气等瞬时条件影响，且直接和建筑的几何参数相关联，比较适合应用于定量分析与制图研究，但<strong>软件计算法</strong>也存在一定问题，即计算精度受建筑数据分辨率和精确度的影响较大，以及计算时的参数选择对结果存在影响等。</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -1191,7 +1204,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.2k</span>
+                        class="white-color">9.8k</span>
             
             
             

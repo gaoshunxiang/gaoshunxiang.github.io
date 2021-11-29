@@ -396,21 +396,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-14
+                    2021-11-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    629
+                    823
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -475,6 +475,23 @@ df<span class="token punctuation">.</span>drop_duplicates<span class="token punc
 value_1 <span class="token operator">=</span> df_example<span class="token punctuation">[</span><span class="token string">"岗位人数"</span><span class="token punctuation">]</span>
 dict1 <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token builtin">zip</span><span class="token punctuation">(</span>key_1<span class="token punctuation">,</span> value_1<span class="token punctuation">)</span><span class="token punctuation">)</span>
 dict1 <span class="token comment"># dict1变成相应的字典</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h5 id="TIP7：DataFrame删除某一列"><a href="#TIP7：DataFrame删除某一列" class="headerlink" title="TIP7：DataFrame删除某一列"></a>TIP7：DataFrame删除某一列</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">DataFrame<span class="token punctuation">.</span>drop<span class="token punctuation">(</span>labels<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> columns<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+	<span class="token comment">#1) 参数说明：</span>
+	<span class="token comment">#2) labels 就是要删除的行列的名字，用列表给定</span>
+	<span class="token comment">#3) axis 默认为0，指删除行，因此删除columns时要指定axis=1；</span>
+	<span class="token comment">#4) index 直接指定要删除的行</span>
+	<span class="token comment">#5) columns 直接指定要删除的列</span>
+	<span class="token comment">#6) inplace=False，默认该删除操作不改变原数据，而是返回一个执行删除操作后的新dataframe；inplace=True，则会直接在原数据上进行删除操作，删除后无法返回。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>TIP8：查找DataFrame中的最小/大值所在行与列</strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#查询最下值</span>
+ri<span class="token punctuation">,</span> ci <span class="token operator">=</span> np<span class="token punctuation">.</span>unravel_index<span class="token punctuation">(</span>np<span class="token punctuation">.</span>nanargmin<span class="token punctuation">(</span>df_origin<span class="token punctuation">.</span>values<span class="token punctuation">)</span><span class="token punctuation">,</span> df_origin<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>df_origin<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">[</span>ri<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>ci<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">#查询最大值</span>
+ri<span class="token punctuation">,</span> ci <span class="token operator">=</span> np<span class="token punctuation">.</span>unravel_index<span class="token punctuation">(</span>np<span class="token punctuation">.</span>nanargmax<span class="token punctuation">(</span>df_origin<span class="token punctuation">.</span>values<span class="token punctuation">)</span><span class="token punctuation">,</span> df_origin<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>df_origin<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">[</span>ri<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>ci<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -1198,7 +1215,7 @@ dict1 <span class="token comment"># dict1变成相应的字典</span><span aria-
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.2k</span>
+                        class="white-color">9.8k</span>
             
             
             

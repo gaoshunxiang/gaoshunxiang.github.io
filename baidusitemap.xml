@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://gaoshunxiang.github.io/pandas-shi-yong-ji-qiao.html</loc>
+    <lastmod>2021-11-29</lastmod>
+  </url>
+  <url>
+    <loc>https://gaoshunxiang.github.io/tian-kong-kai-kuo-du-jian-jie.html</loc>
+    <lastmod>2021-10-19</lastmod>
+  </url>
+  <url>
     <loc>https://gaoshunxiang.github.io/pyinstaller-da-bao-fang-fa.html</loc>
     <lastmod>2021-10-19</lastmod>
   </url>
   <url>
     <loc>https://gaoshunxiang.github.io/juypter-wen-jian-zhuan-wei-py-wen-jian.html</loc>
     <lastmod>2021-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://gaoshunxiang.github.io/pandas-shi-yong-ji-qiao.html</loc>
-    <lastmod>2021-07-14</lastmod>
   </url>
   <url>
     <loc>https://gaoshunxiang.github.io/ji-qi-xue-xi-day02.html</loc>
@@ -27,10 +31,6 @@
   <url>
     <loc>https://gaoshunxiang.github.io/fu-miao-bian-pang-liao.html</loc>
     <lastmod>2021-07-03</lastmod>
-  </url>
-  <url>
-    <loc>https://gaoshunxiang.github.io/tian-kong-kai-kuo-du-jian-jie.html</loc>
-    <lastmod>2021-06-28</lastmod>
   </url>
   <url>
     <loc>https://gaoshunxiang.github.io/python-hua-bai-fen-bi-dui-ji-tiao-xing-tu.html</loc>
