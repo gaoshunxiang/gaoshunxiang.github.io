@@ -396,14 +396,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-29
+                    2021-12-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    823
+                    854
                 </div>
                 
 
@@ -492,6 +492,12 @@ ri<span class="token punctuation">,</span> ci <span class="token operator">=</sp
 <span class="token comment">#查询最大值</span>
 ri<span class="token punctuation">,</span> ci <span class="token operator">=</span> np<span class="token punctuation">.</span>unravel_index<span class="token punctuation">(</span>np<span class="token punctuation">.</span>nanargmax<span class="token punctuation">(</span>df_origin<span class="token punctuation">.</span>values<span class="token punctuation">)</span><span class="token punctuation">,</span> df_origin<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>df_origin<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">[</span>ri<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>ci<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>TIP9：求百分比数</strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+a<span class="token operator">=</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+np<span class="token punctuation">.</span>median<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token comment">#中位数</span>
+np<span class="token punctuation">.</span>percentile<span class="token punctuation">(</span>a<span class="token punctuation">,</span><span class="token number">95</span><span class="token punctuation">)</span><span class="token comment">#95%分位数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -1215,7 +1221,7 @@ ri<span class="token punctuation">,</span> ci <span class="token operator">=</sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.8k</span>
+                        class="white-color">9.9k</span>
             
             
             
