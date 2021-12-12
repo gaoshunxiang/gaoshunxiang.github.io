@@ -1,3 +1,4 @@
+https://gaoshunxiang.github.io/matplotlib-hua-tu.html
 https://gaoshunxiang.github.io/pyinstaller-da-bao-fang-fa.html
 https://gaoshunxiang.github.io/juypter-wen-jian-zhuan-wei-py-wen-jian.html
 https://gaoshunxiang.github.io/ji-qi-xue-xi-day02.html
